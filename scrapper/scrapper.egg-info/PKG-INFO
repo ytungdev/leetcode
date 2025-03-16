@@ -1,0 +1,9 @@
+Metadata-Version: 2.2
+Name: scrapper
+Version: 0.2.0
+Summary: Add your description here
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: beautifulsoup4>=4.13.3
+Requires-Dist: selenium>=4.29.0
+Requires-Dist: selenium-stealth>=1.0.6

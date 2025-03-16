@@ -1,0 +1,13 @@
+[project]
+name = "scrapper"
+version = "0.2.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "beautifulsoup4>=4.13.3",
+    "selenium>=4.29.0",
+    "selenium-stealth>=1.0.6",
+]
+[project.scripts]
+new = "main:main"
