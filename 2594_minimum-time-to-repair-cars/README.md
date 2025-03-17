@@ -1,4 +1,4 @@
-[2594. Minimum Time to Repair Cars](https://leetcode.com/problems/minimum-time-to-repair-cars/description)
+# [2594. Minimum Time to Repair Cars](https://leetcode.com/problems/minimum-time-to-repair-cars/)
 
 > Medium
 
@@ -47,12 +47,11 @@ It can be proved that the cars cannot be repaired in less than 16 minutes.​​
 
 
 
- ## Solution
+## Solution
 
-- binary search
 - time  : O(n log(n))
 - space : O(n)
-
+- binary search
 
 - Given
 	- upper bound : intuitive solution (suboptimal) - best mechanic `top` fix every cars
@@ -63,10 +62,3 @@ It can be proved that the cars cannot be repaired in less than 16 minutes.​​
 - implement
 	- iterate from `hi` to `lo` with binary search
 		- `mid` = `(hi+lo)//2`
-		- for every `mid`:
-			- calculate how many car each mechanic can fix in `t=mid`(minutes): `fixed[i]=math.floor((t/ranks[i])**0.5)`
-			- if `t=mid` is feasible (`sum(res) >= cars`)
-				- find better solution with `search(hi=mid, lo=lo)`
-			- if `t=mid` is not feasible (`sum(res) < cars`)
-				- find solution with `search(hi=hi, lo=mid+1)`
-
