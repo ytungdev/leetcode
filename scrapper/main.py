@@ -6,6 +6,8 @@ from selenium_stealth import stealth
 import json
 from pathlib import Path
 
+import datetime
+
 def main():
     options = webdriver.ChromeOptions()
     options.add_argument("--headless=new")
@@ -54,6 +56,11 @@ def main():
         file.write('- time  : O()\n')
         file.write('- space : O()\n')
     print(f'create : {new_dir}')
+    with open(".\leetcode-log.csv", 'a', encoding="utf-8") as log:
+        timestamp = datetime.datetime.now().replace(microsecond=0).isoformat()
+        log.write(f'{timestamp}, {q_number}, {q_slug}, {q_lvl}, {url}')
+    print(f'logged')
+
 
 if __name__ == '__main__':
     main()
