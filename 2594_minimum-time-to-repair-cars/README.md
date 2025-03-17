@@ -51,7 +51,7 @@ It can be proved that the cars cannot be repaired in less than 16 minutes.​​
 
 - binary search
 - time  : O(n log(n))
-- space : O(1)
+- space : O(n)
 
 
 - Given
