@@ -47,10 +47,13 @@ def main():
 
     # write .md file
     with open(f"{new_dir}/README.md", "w", encoding="utf-8") as file:
-        file.write(f'[{q_number}. {q_title}]({url})\n\n')
+        file.write(f'# [{q_number}. {q_title}]({url})\n\n')
         file.write(f'> {q_lvl}\n\n')
         file.write(q_content)
-        file.write('\n\n\n ## Solution\n')
+        file.write('\n\n\n## Solution\n\n')
+        file.write('- time  : O()\n')
+        file.write('- space : O()\n')
+    print(f'create : {new_dir}')
 
 if __name__ == '__main__':
     main()
